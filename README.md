@@ -35,7 +35,17 @@ This link skips the first video in the playlist because it talks about installat
  * Lab - Sept 18
    * Lab exercise - [exercises/plotting_basics.ipynb](exercises/plotting_basics.ipynb) (it uses [exercises/OshawaWeather2016.csv](exercises/OshawaWeather2016.csv))
    * [Slides](lectures/03_week_lab.ipynb)
- * Home reading / exercise
-   * [Basic Pandas tutorial](https://www.wintellect.com/using-pandas-to-analyze-sales-data/), to follow along download OfficeSupplies.csv file [here](https://www.superdatascience.com/tableau/)
- 
+ * Lecture - Sept 20
+   * [Slides](lectures/03_week.ipynb)
+ * Home reading & videos (important!)
+   * [Video playlist about Pandas](https://www.dataschool.io/easier-data-analysis-with-pandas/) (watch the first 10 videos - about 1 hour 33 min total)
+   * [Notebook & data used in the videos](https://github.com/justmarkham/pandas-videos/) (GitHub) - the notebook has sufficient comments to be very useful without videos as well
+   
+## Week 4
+ * Home assignment - [exercises/numpy_assignment.py](exercises/numpy_assignment.py) (instructions inside)
+ * Lab - Sept 25
+   * Lab exercise - [exercises/olympic_history.ipynb](exercises/olympic_history.ipynb)
+   * [Slides](lectures/04_week_lab.ipynb)
+
+   
   
