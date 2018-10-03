@@ -44,8 +44,20 @@ This link skips the first video in the playlist because it talks about installat
 ## Week 4
  * Home assignment - [exercises/numpy_assignment.py](exercises/numpy_assignment.py) (instructions inside)
  * Lab - Sept 25
-   * Lab exercise - [exercises/olympic_history.ipynb](exercises/olympic_history.ipynb)
    * [Slides](lectures/04_week_lab.ipynb)
+   * Lab exercise - [exercises/olympic_history.ipynb](exercises/olympic_history.ipynb)
+     * Solutions - [exercises/olympic_history_solutions.ipynb](exercises/olympic_history_solutions.ipynb)
+ * Lecture - Sept 27
+   * [Slides](lectures/04_week.ipynb) 
 
+## Week 5
+ * Lab - Oct 2
+   * [Slides](lectures/05_week_lab.ipynb)
+   * Exercise: [exercises/active_satellites.ipynb](exercises/active_satellites.ipynb) and  [exercises/active_satellites.csv](exercises/active_satellites.csv)
+ * Lecture - Oct 4
+   * [Slides](lectures/05_week.ipynb)
+   
+## Week 6
+ * [Home Assignment 1](exercises/numpy_assignment.py) is due Tuesday Oct 9, 23:59
    
   
