@@ -31,7 +31,7 @@ assignment_version = '1.0'
 
 ## Task 1 ###################################################################### 
 # Replace 999 with your student id
-student_id = 999
+student_id = 100407074
 
 ## Task 2 ######################################################################
 # Create an N by N 2D array with 1 on both diagonals and zeros everywhere else. 
@@ -42,8 +42,13 @@ student_id = 999
 #        [0, 1, 1, 0],         [1, 0, 1]]
 #        [1, 0, 0, 1]])
 
+
 def xmatrix(N):
-    return np.zeros((N,N), dtype=int)
+    a = np.zeros((N, N), int)
+    np.fill_diagonal(a, 1)
+    b = np.flip(a, axis=0)
+    np.fill_diagonal(b, 1)
+    return b
 
 ## Task 3 ######################################################################
 # Write a function that given a 2D array m finds the column with the lowest sum, 
@@ -68,7 +73,12 @@ def xmatrix(N):
 #    For example, for 1D array `b` if ix = b.argmin() then b[ix] == b.min()
 
 def min_row_col(m):
-    return 0, 0  # min_row_ix, min_col_ix
+    col_sums = np.sum(m, axis=0)
+    row_sums = np.sum(m, axis=1)
+    col_ind = np.argmin(col_sums)  
+    row_ind = np.argmin(row_sums)
+    min_index = (row_ind, col_ind)
+    return min_index
 
 ## Task 4 ###################################################################### 
 # The `car_data` array holds reading from a car dashboard. The first column is
@@ -81,7 +91,22 @@ def min_row_col(m):
 #
 # FYI: The RPM gauge is called "tachometer"
 def fix_gauge_bias(car_data, speed_bias, rpm_bias):
-    return car_data
+    speedometer = car_data[:,0]
+    tachometer = car_data[:,1]
+    actual_speed = speedometer - speed_bias
+    actual_rpm = tachometer - rpm_bias 
+    return np.column_stack((actual_speed, actual_rpm))
+
+# THIS WAS JUST FOR FUN vvvvvvvvv
+# def fix_gauge_bias(car_data, speed_bias, rpm_bias):
+#     speedometer = car_data[:,:1]
+#     tachometer = car_data[:,1:]
+#     actual_speed = speedometer - speed_bias
+#     actual_rpm = tachometer - rpm_bias
+#     print(np.shape(tachometer))
+#     print(actual_rpm)
+#     return np.concatenate((actual_speed, actual_rpm), axis=1)
+
 
 ## Task 5
 # Continuing with car data from previous task. In most cars the ratio between
@@ -106,8 +131,17 @@ def fix_gauge_bias(car_data, speed_bias, rpm_bias):
 # FYI: The ratio behaves differently for some newer transmission architectures
 # such as continuously variable transmission (CVT) and the hybrid transmission
 # in Toyota Prius.
+
 def was_gear_switched(car_data):
+    speed = car_data[:,0]
+    rpm = car_data[:,1]
+    ratios = rpm / speed
+    differences = np.abs(np.diff(ratios))
+    for n in differences:
+        if(n >= 10):
+            return True
     return False
+
 
 ## Task 6 (bonus) ##############################################################
 # With the same data and assumptions as Task 3 count how many different gears
@@ -121,9 +155,11 @@ def was_gear_switched(car_data):
 # HINT: take a look at np.unique() and array sort() functions, they might be
 # useful (depending on the strategy you choose).
 def count_gears_used(car_data):
-    return 1
-
-    
+    speed = car_data[:,0]
+    rpm = car_data[:,1]
+    ratios = rpm / speed
+    differences = np.abs(np.diff(ratios))
+    return np.unique(differences).size
 
 if __name__ == '__main__':
     ## Your own tests, feel free to do whatever you want here as long as it doesn't crash
