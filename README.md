@@ -10,7 +10,12 @@ Python Data Science Handbook: Essential Tools for Working with Data (by Jake Van
 ## Tools
  - Anaconda download page: https://www.anaconda.com/download/ (Use the Python 3.6 version)
  - Basic tutorial about git and GitHub: [video](https://www.youtube.com/watch?v=0fKg7e37bQE) (skip it if you used git before)
- 
+
+## Prerequisites
+This course assumes reasonable knowledge of Python, if you haven't used Python before, consider one of the following resources:
+- [Codecademy's Python course](https://www.codecademy.com/learn/learn-python) - browser-based, tons of exercises
+- [DataQuest](https://www.dataquest.io/) - browser-based, teaches Python in the context of data science
+- [CheckIO](https://checkio.org/) - a good collection of exercises to try when you are comfortable with the basics
 
 ## Week 1
    * [Lab notebook - Sept 4th](lectures/01_week_lab.ipynb)
@@ -22,15 +27,19 @@ Python Data Science Handbook: Essential Tools for Working with Data (by Jake Van
    * Lab exercise - [exercises/numpy_basics.ipynb](exercises/numpy_basics.ipynb)
      * [Solutions](http://nbviewer.jupyter.org/url/kamrik.org/ML1/numpy_basics_solutions.ipynb)
    * [Slides](lectures/02_week_lab.ipynb)
-   * NumPy quick reference: https://github.com/juliangaal/python-cheat-sheet
-   * A [playlist of several good short videos introducing different types of plots with matplotlib](https://www.youtube.com/watch?v=zl5qPnqps8M&index=2&list=PLeo1K3hjS3uu4Lr8_kro2AqaO6CFYgKOl) 
-This link skips the first video in the playlist because it talks about installation and you already have matplotlib installed via Anaconda.
-   * [Basic plotting tutorial on matplotlib website](https://matplotlib.org/users/pyplot_tutorial.html)
  * Lecture - Sept 13
    * [Slides](lectures/02_week.ipynb) (not too many of them, most of the lecture is live / whiteboard) 
    * [Whiteboard screenshot](lectures/02_week_whiteboard.png) (png image, for full resolution click "Download" above the image)
    * [IPython transcript](lectures/02_week_ipython_transcript.py) (What the instrucor was typing - no output. Not usefully runnable as a single Python file)
+ * Links
+   * NumPy
+     * Quick reference: https://github.com/juliangaal/python-cheat-sheet
+     * Videos: [video 1](https://www.youtube.com/watch?v=BLGo3PXoX1A), [video 2](https://www.youtube.com/watch?v=7YvKhcs7sb0) - from the [Python Programmer YouTube channel](https://www.youtube.com/channel/UC68KSmHePPePCjW4v57VPQg)
+   * Matplotlib
+     * A [playlist of several good short videos introducing different types of plots with matplotlib](https://www.youtube.com/watch?v=zl5qPnqps8M&index=2&list=PLeo1K3hjS3uu4Lr8_kro2AqaO6CFYgKOl) This link skips the first video in the playlist because it talks about installation and you already have matplotlib installed via Anaconda.
+     * [Basic plotting tutorial on matplotlib website](https://matplotlib.org/users/pyplot_tutorial.html)
    * [Facts and Myths about Python names and values](https://www.youtube.com/watch?v=_AEJHKGk9ns) - by Ned Batchelder at PyCon 2015 (video, 25min)
+ 
    
 ## Week 3
  * Lab - Sept 18
@@ -50,7 +59,9 @@ This link skips the first video in the playlist because it talks about installat
    * Lab exercise - [exercises/olympic_history.ipynb](exercises/olympic_history.ipynb)
      * Solutions - [exercises/olympic_history_solutions.ipynb](exercises/olympic_history_solutions.ipynb)
  * Lecture - Sept 27
-   * [Slides](lectures/04_week.ipynb) 
+   * [Slides](lectures/04_week.ipynb)
+ * More videos about Pandas
+   * [Pandas best practices](https://www.youtube.com/playlist?list=PL5-da3qGB5IBITZj_dYSFqnd_15JgqwA6) - video playlist
 
 ## Week 5
  * Lab - Oct 2
@@ -68,5 +79,24 @@ This link skips the first video in the playlist because it talks about installat
      * [Solutions](http://nbviewer.jupyter.org/url/kamrik.org/ML1/week6_lab_solutions.ipynb)
  * Lecture - Oct 11
    * [Slides](lectures/06_week.ipynb)
-   
+## Week 7
+ * Lab - Oct 16
+ * Lecture - Oct 18, MID-TERM
+## Week 8 - Intersession Week (Oct 22-28)
+
+# Part 2 - scikit-learn
+ * scikit-learn is already installed if you use Anaconda Python
+ * [Video playlist](https://www.dataschool.io/machine-learning-with-scikit-learn/) and [corresponding notebooks](https://github.com/justmarkham/scikit-learn-videos)  (**highly recommended**)
+   * Skim through this [post about changes in scikit-learn since the videos were recorded](https://www.dataschool.io/how-to-update-your-scikit-learn-code-for-2018/)
+ * Book [chapter 5](https://jakevdp.github.io/PythonDataScienceHandbook/#5.-Machine-Learning)
   
+## Week 9
+ * Lab - Oct 30
+   * [Slides](lectures/09_week_lab.ipynb)
+   * Exercise: [exercises/mpg_regression.ipynb](exercises/mpg_regression.ipynb)
+ * Lecture - Nov 1
+   * [Slides](lectures/09_week.ipynb)
+ * Links
+   * [So Why Is It Called "Regression," Anyway?](http://blog.minitab.com/blog/statistics-and-quality-data-analysis/so-why-is-it-called-regression-anyway)
+   * [Linear regression example - Boston housing dataset](https://www.youtube.com/watch?v=Rrpk-fTG5Dw) (video)
+   * If you are curious about the math behind linear regression (slow): [Khan Academy - least squares fit](https://www.khanacademy.org/math/ap-statistics/bivariate-data-ap#least-squares-regression)
