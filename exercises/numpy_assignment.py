@@ -50,6 +50,12 @@ def xmatrix(N):
     np.fill_diagonal(b, 1)
     return b
 
+
+# def xmatrix(N):
+#     arr1 = np.eye(7)
+#     arr2 = np.flip(arr1, -1)
+#     return np.ceil((np.add(arr1, arr2)) / 2)
+
 ## Task 3 ######################################################################
 # Write a function that given a 2D array m finds the column with the lowest sum, 
 # and the row with the lowest sum and returns their indices.
@@ -143,6 +149,14 @@ def was_gear_switched(car_data):
     return False
 
 
+def was_gear_switched(car_data):
+    speed = car_data[:,0]
+    rpm = car_data[:,1]
+    ratios = rpm / speed
+    # different line 
+    (ratios.max() - ratios.min()) / ratios[0] * 100
+
+
 ## Task 6 (bonus) ##############################################################
 # With the same data and assumptions as Task 3 count how many different gears
 # were used. If car goes from gear 1 to gear 2 and back to gear 1, it still
@@ -160,6 +174,12 @@ def count_gears_used(car_data):
     ratios = rpm / speed
     differences = np.abs(np.diff(ratios))
     return np.unique(differences).size
+
+np.sort(differences)
+# sort!!!!!
+
+
+
 
 if __name__ == '__main__':
     ## Your own tests, feel free to do whatever you want here as long as it doesn't crash
